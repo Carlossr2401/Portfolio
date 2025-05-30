@@ -1,5 +1,6 @@
 import React from "react";
 import Sidebar from "./components/Sidebar/Sidebar";
+import AboutMe from "./components/AboutMe/AboutMe";
 import "./App.css"; // Para estilos generales
 
 const App: React.FC = () => {
@@ -7,8 +8,7 @@ const App: React.FC = () => {
     <div className="app-container">
       <Sidebar />
       <main className="content">
-        <h1>Contenido Principal</h1>
-        <p>Este es el área de contenido, a la derecha de la barra lateral.</p>
+        <AboutMe />
       </main>
     </div>
   );

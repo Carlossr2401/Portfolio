@@ -1,0 +1,101 @@
+.about-me {
+  max-width: 800px;
+  margin: auto;
+  padding: 0 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.about-me-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #1e293b;
+  border-bottom: 3px solid #38bdf8;
+  padding-bottom: 8px;
+}
+
+.about-me-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #f1f5f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 0.1);
+}
+
+.about-me-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #38bdf8;
+}
+
+.about-me-text p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #334155;
+  margin: 0 0 15px 0;
+}
+
+.about-me-socials a {
+  margin-right: 15px;
+  font-weight: 600;
+  color: #2563eb;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.about-me-socials a:hover {
+  color: #1d4ed8;
+}
+
+/*
+A partir de aquí son tecnologias
+*/
+
+.technologies-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.technologies-grid {
+  display: flex;
+  justify-content: space-between; /* Opcional: distribuye el espacio */
+  gap: 20px;
+  flex-wrap: wrap; /* Para que se adapte en pantallas pequeñas */
+}
+
+.tech-category {
+  flex: 1;
+  min-width: 200px; /* Evita que se hagan demasiado pequeños */
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  padding: 15px;
+}
+
+.category-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.tech-category ul {
+  list-style: none;
+  padding: 0;
+}
+
+.tech-category li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.tech-category li svg {
+  font-size: 20px;
+  color: #333;
+}

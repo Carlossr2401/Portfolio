@@ -1,26 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Sidebar.css";
 
+const items = [
+  { id: 1, label: "Inicio" },
+  { id: 2, label: "Acerca" },
+  { id: 3, label: "Servicios" },
+  { id: 4, label: "Contacto" },
+];
+
 const Sidebar: React.FC = () => {
+  const [selectedId, setSelectedId] = useState<number>(1);
+
   return (
     <aside className="sidebar">
       <h2 className="sidebar-title">Mi Barra Lateral</h2>
-      <nav>
-        <ul className="sidebar-list">
-          <li>
-            <a href="#home">ABOUT ME</a>
+      <ul className="sidebar-list">
+        {items.map(({ id, label }) => (
+          <li
+            key={id}
+            className={`sidebar-item ${selectedId === id ? "selected" : ""}`}
+            onClick={() => setSelectedId(id)}
+          >
+            {label}
           </li>
-          <li>
-            <a href="#about">PROJECTS</a>
-          </li>
-          <li>
-            <a href="#services">ACADEMIC COURSE</a>
-          </li>
-          <li>
-            <a href="#contact">CONTACT ME</a>
-          </li>
-        </ul>
-      </nav>
+        ))}
+      </ul>
     </aside>
   );
 };
