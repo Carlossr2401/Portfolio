@@ -1,0 +1,9 @@
+.app-container {
+  display: flex;
+}
+
+.content {
+  margin-left: 250px; /* igual que el ancho del sidebar */
+  padding: 20px;
+  flex-grow: 1;
+}
