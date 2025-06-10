@@ -1,30 +1,49 @@
 import React, { useState } from "react";
 import "./Sidebar.css";
 
-const items = [
-  { id: 1, label: "Inicio" },
-  { id: 2, label: "Acerca" },
-  { id: 3, label: "Servicios" },
-  { id: 4, label: "Contacto" },
-];
+interface SidebarItem {
+  id: number;
+  label: string;
+  component: React.ReactNode;
+  icon?: React.ReactNode; // Nuevo: soporte para íconos
+}
 
-const Sidebar: React.FC = () => {
-  const [selectedId, setSelectedId] = useState<number>(1);
+interface SidebarProps {
+  items: SidebarItem[];
+  onSelect: (component: React.ReactNode) => void;
+}
+
+const Sidebar: React.FC<SidebarProps> = ({ items, onSelect }) => {
+  const [selectedId, setSelectedId] = useState<number>(items[0].id);
+
+  const handleClick = (id: number, component: React.ReactNode) => {
+    setSelectedId(id);
+    onSelect(component);
+  };
 
   return (
     <aside className="sidebar">
-      <h2 className="sidebar-title">Mi Barra Lateral</h2>
-      <ul className="sidebar-list">
-        {items.map(({ id, label }) => (
-          <li
-            key={id}
-            className={`sidebar-item ${selectedId === id ? "selected" : ""}`}
-            onClick={() => setSelectedId(id)}
-          >
-            {label}
-          </li>
-        ))}
-      </ul>
+      <div className="sidebar-header">
+        <h2 className="sidebar-title">Mi Portafolio</h2>
+      </div>
+
+      <nav className="sidebar-nav">
+        <ul className="sidebar-list">
+          {items.map(({ id, label, component, icon }) => (
+            <li
+              key={id}
+              className={`sidebar-item ${selectedId === id ? "active" : ""}`}
+              onClick={() => handleClick(id, component)}
+            >
+              <span className="item-content">
+                {icon && <span className="item-icon">{icon}</span>}
+                {label}
+              </span>
+              <div className="active-indicator"></div>
+            </li>
+          ))}
+        </ul>
+      </nav>
     </aside>
   );
 };

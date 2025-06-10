@@ -14,8 +14,8 @@ import { SiTailwindcss, SiFlask, SiR } from "react-icons/si";
 
 const AboutMe = () => {
   return (
-    <section className="about-me">
-      <h2 className="about-me-title">Sobre mí</h2>
+    <section className="section-title">
+      <h2 className="about-me-title">About Me</h2>
       <div className="about-me-content">
         <img
           src="https://avatars.githubusercontent.com/u/583231?v=4"
@@ -31,7 +31,7 @@ const AboutMe = () => {
           </p>
           <div className="about-me-socials">
             <a
-              href="https://github.com/tuusuario"
+              href="https://github.com/Carlossr2401"
               target="_blank"
               rel="noreferrer"
             >
@@ -49,7 +49,7 @@ const AboutMe = () => {
               target="_blank"
               rel="noreferrer"
             >
-              Twitter
+              CV
             </a>
           </div>
         </div>

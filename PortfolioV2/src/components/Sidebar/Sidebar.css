@@ -1,55 +1,101 @@
+/* Sidebar.css */
 .sidebar {
-  width: 250px;
-  background-color: #1e293b;
-  color: white;
-  padding: 20px;
-  box-sizing: border-box;
-  height: 97vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 280px;
+  background: #ffffff;
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+
+.sidebar-header {
+  padding: 1.5rem 1.5rem 1rem;
+  border-bottom: 1px solid #f0f0f0;
 }
 
 .sidebar-title {
+  margin: 0;
   font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid #38bdf8;
+  font-weight: 600;
+  color: #2d3748;
 }
 
-/* La lista ocupa el espacio restante */
+.sidebar-nav {
+  flex: 1;
+  padding: 1rem 0;
+  overflow-y: auto;
+}
+
 .sidebar-list {
   list-style: none;
   padding: 0;
   margin: 0;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
 }
 
-/* Cada item ocupa un 25% del alto total */
 .sidebar-item {
-  flex: 0 0 20%; /* flex-grow:0, flex-shrink:0, flex-basis:25% */
-  padding: 0.75rem 1rem;
-  font-size: 1rem;
+  position: relative;
+  padding: 0.8rem 1.5rem;
   cursor: pointer;
-  transition: font-size 0.3s ease, color 0.3s ease, background-color 0.3s ease;
-  border-radius: 4px;
-  user-select: none;
+  transition: all 0.2s ease;
   display: flex;
-  align-items: center; /* Centra vertical el texto */
+  align-items: center;
+  justify-content: space-between;
 }
 
-/* Item seleccionado más grande */
-.sidebar-item.selected {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #38bdf8;
-  background-color: #334155;
+.sidebar-item:hover {
+  background-color: #f8fafc;
 }
 
-/* Hover solo si no está seleccionado */
-.sidebar-item:not(.selected):hover {
-  background-color: #475569;
-  color: #a5b4fc;
+.sidebar-item.active {
+  background-color: #f1f5f9;
+}
+
+.item-content {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #4a5568;
+}
+
+.sidebar-item.active .item-content {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.item-icon {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+}
+
+.active-indicator {
+  width: 3px;
+  height: 24px;
+  background-color: #2563eb;
+  border-radius: 2px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.sidebar-item.active .active-indicator {
+  opacity: 1;
+}
+
+/* Efecto para pantallas pequeñas (opcional) */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 240px;
+    transform: translateX(-100%);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
 }
