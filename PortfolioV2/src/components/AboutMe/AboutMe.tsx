@@ -9,6 +9,7 @@ import {
   FaJsSquare,
   FaJava,
   FaPython,
+  FaDownload,
 } from "react-icons/fa";
 import { SiTailwindcss, SiFlask, SiR } from "react-icons/si";
 
@@ -45,11 +46,11 @@ const AboutMe = () => {
               LinkedIn
             </a>
             <a
-              href="https://twitter.com/tuusuario"
-              target="_blank"
-              rel="noreferrer"
+              href="/docs/CurriculumVitaeCarlos.pdf" // Asegúrate de tener el archivo en public/docs/
+              download="CarlosSR_FullStack_CV.pdf"
+              className="cv-download-link"
             >
-              CV
+              <FaDownload className="icon" /> Download CV
             </a>
           </div>
         </div>
