@@ -25,10 +25,14 @@ const AboutMe = () => {
         />
         <div className="about-me-text">
           <p>
-            ¡Hola! Soy un desarrollador apasionado por crear aplicaciones web
-            modernas y eficientes. Me encanta aprender nuevas tecnologías y
-            mejorar mis habilidades constantemente. Actualmente, trabajo con
-            React, TypeScript y Node.js.
+            I am a Computer Science student with international academic
+            experience from my Erasmus at the University of Bologna. While I'm
+            just starting my professional journey, I've worked on cross-border
+            academic projects and mastered multiple programming languages
+            through hands-on learning. I'm currently building my portfolio
+            (including this site) while seeking curricular internship
+            opportunities. A quick learner and problem-solver, I thrive when
+            adapting to new technologies and collaborative environments.
           </p>
           <div className="about-me-socials">
             <a

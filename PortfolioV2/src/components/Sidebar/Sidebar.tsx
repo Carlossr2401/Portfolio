@@ -24,7 +24,9 @@ const Sidebar: React.FC<SidebarProps> = ({ items, onSelect }) => {
   return (
     <aside className="sidebar">
       <div className="sidebar-header">
-        <h2 className="sidebar-title">Mi Portafolio</h2>
+        <h2 className="sidebar-title">
+          My Portfolio <br /> Carlos Serradilla
+        </h2>
       </div>
 
       <nav className="sidebar-nav">

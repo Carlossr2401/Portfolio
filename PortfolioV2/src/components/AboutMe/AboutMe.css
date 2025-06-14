@@ -98,3 +98,30 @@ A partir de aquí son tecnologias
 .tech-category li:hover svg {
   color: #1154e9; /* Cambia color de texto e icono */
 }
+
+/* Animación de fade-in */
+.about-me-enter {
+  opacity: 0;
+}
+
+.about-me-enter-active {
+  opacity: 1;
+  transition: opacity 1500ms ease-in-out; /* 1.5 segundos */
+}
+
+/* Aplicar a todos los elementos principales */
+.section-title,
+.about-me-content,
+.technologies-grid {
+  opacity: 0;
+  animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
