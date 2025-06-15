@@ -1,8 +1,0 @@
-.vertical-timeline::before {
-  background: #3182ce !important; /* Cambia el color de la línea */
-}
-
-.vertical-timeline-element-content {
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1) !important;
-  border-top: 3px solid #3182ce;
-}
