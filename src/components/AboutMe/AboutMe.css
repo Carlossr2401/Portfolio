@@ -1,0 +1,127 @@
+.about-me-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #1e293b;
+  border-bottom: 3px solid #38bdf8;
+  padding-bottom: 8px;
+}
+
+.about-me-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #eeeeee;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 0.1);
+}
+
+.about-me-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #38bdf8;
+}
+
+.about-me-text p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #334155;
+  margin: 0 0 15px 0;
+}
+
+.about-me-socials a {
+  margin-right: 30px;
+  font-weight: 600;
+  color: #38bdf8;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.about-me-socials a:hover {
+  color: #6a95f4;
+}
+
+/*
+A partir de aquí son tecnologias
+*/
+
+.technologies-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.technologies-grid {
+  display: flex;
+  justify-content: space-between; /* Opcional: distribuye el espacio */
+  gap: 20px;
+  flex-wrap: wrap; /* Para que se adapte en pantallas pequeñas */
+  cursor: default;
+}
+
+.tech-category {
+  flex: 1;
+  min-width: 200px; /* Evita que se hagan demasiado pequeños */
+  background-color: #eeeeee;
+  border-radius: 8px;
+  padding: 0 15px;
+}
+
+.category-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.tech-category ul {
+  list-style: none;
+  padding: 0;
+}
+
+.tech-category li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.tech-category li svg {
+  font-size: 20px;
+  color: #333;
+}
+
+.tech-category li:hover,
+.tech-category li:hover svg {
+  color: #1154e9; /* Cambia color de texto e icono */
+}
+
+/* Animación de fade-in */
+.about-me-enter {
+  opacity: 0;
+}
+
+.about-me-enter-active {
+  opacity: 1;
+  transition: opacity 1500ms ease-in-out; /* 1.5 segundos */
+}
+
+/* Aplicar a todos los elementos principales */
+.section-title,
+.about-me-content,
+.technologies-grid {
+  opacity: 0;
+  animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
