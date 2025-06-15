@@ -19,7 +19,7 @@ const AboutMe = () => {
       <h2 className="about-me-title">About Me</h2>
       <div className="about-me-content">
         <img
-          src="https://avatars.githubusercontent.com/u/583231?v=4"
+          src="myAvatar.svg"
           alt="Foto de perfil"
           className="about-me-photo"
         />
@@ -43,7 +43,7 @@ const AboutMe = () => {
               GitHub
             </a>
             <a
-              href="https://linkedin.com/in/tuusuario"
+              href="https://www.linkedin.com/in/carlos-serradilla-rodriguez-975066322/"
               target="_blank"
               rel="noreferrer"
             >

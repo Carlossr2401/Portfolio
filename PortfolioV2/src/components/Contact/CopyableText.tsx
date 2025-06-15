@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
 import { FaCheck } from "react-icons/fa";
+import "./Contact.css";
 
 interface CopyableTextProps {
   text: string;
